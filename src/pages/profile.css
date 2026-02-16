@@ -1,0 +1,51 @@
+/* Profile header */
+.profile-shell{padding:16px;max-width:420px;margin:12px auto}
+.profile-head.card{display:flex;gap:16px;align-items:flex-start;padding:16px;border:2px solid #000000;border-radius:8px;background:#061936}
+.avatar{width:84px;height:84px;border-radius:50%;background:#efefef;display:flex;align-items:center;justify-content:center;font-weight:600;color:#666;text-transform:lowercase}
+.avatar.big{width:104px;height:104px;font-size:18px}
+.avatar img{width:100%;height:100%;border-radius:50%;object-fit:cover}
+.meta h3{margin:0; color:#f7eaea;font-size:20px}
+.top-row{display:flex;align-items:center;gap:12px}
+.addr-boxes{display:flex;flex-direction:column;gap:8px;margin-left:auto}
+.addr{padding:6px 8px;border-radius:6px;border:2px solid #2b7be3;background:#f5fbff;color:#2b7be3;font-size:13px}
+.stats{display:flex;gap:18px;margin-top:12px}
+.stats div{display:flex;flex-direction:column;align-items:flex-start;font-size:13px;color:#f7eaea}
+.stats span{font-size:12px;color:#f7eaea}
+
+.divider{height:8px;width:100%;margin:10px 0;border-top:2px solid #6361da}
+
+.videos-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;margin-top:8px}
+
+.video-card{color:#111;overflow:hidden;cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding:6px;min-height:120px}
+.thumb{width:100%;height:200px;object-fit:cover}
+.video-name{padding:8px;font-size:14px;color:#222;text-align:center}
+.empty{padding:40px;text-align:center;color:#777}
+
+.add-card{display:flex;flex-direction:column;align-items:center;justify-content:center;background:#fff;border:2px dashed #060a0e}
+.plus-circle{width:48px;height:48px;border-radius:24px;background:#fff;color:#000000;display:flex;align-items:center;justify-content:center;font-size:28px;margin-bottom:8px;border:2px solid #05090e}
+
+.preview-modal{position:fixed;inset:0;background:rgba(0,0,0,0.6);display:flex;align-items:center;justify-content:center}
+.preview-card{background:#fff;padding:12px;border-radius:10px;max-width:90%;width:720px}
+.preview-player{width:100%;height:420px;object-fit:contain}
+.close{margin-top:8px;padding:8px 10px;border-radius:6px;border:none;background:#ff5a5f;color:#fff;cursor:pointer}
+
+.upload-modal{position:fixed;inset:0;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;z-index:1100}
+.upload-card{background:#fff;width:420px;max-width:95%;border-radius:10px;padding:18px;box-shadow:0 8px 24px rgba(0,0,0,0.2)}
+.upload-card h3{margin:0 0 12px 0}
+.upload-form label{display:block;margin-bottom:12px;font-size:14px}
+.upload-form input,.upload-form textarea{width:100%;padding:8px;border:1px solid #e6e6e6;border-radius:6px}
+.file-field{position:relative;overflow:hidden}
+.file-field input[type=file]{position:absolute;left:0;top:0;opacity:0;width:100%;height:100%;cursor:pointer}
+.upload-drop{height:120px;border:1px dashed #ccc;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#888}
+.preview-video{width:100%;height:160px;object-fit:cover;border-radius:6px}
+.actions{display:flex;gap:8px;justify-content:flex-end;margin-top:12px}
+.btn{padding:8px 12px;border-radius:8px;border:1px solid #ccc;background:#fff;cursor:pointer}
+.btn.primary{background:#ff5a5f;color:#fff;border-color:transparent}
+.error{color:#b00020;margin-top:6px}
+.progress{margin-top:6px;color:#333}
+
+@media(max-width:720px){
+  .profile-shell{padding:8px}
+  .videos-grid{grid-template-columns:repeat(2,1fr)}
+  .preview-player{height:240px}
+}

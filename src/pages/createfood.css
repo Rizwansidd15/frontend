@@ -1,0 +1,106 @@
+/* Modern CreateFood form styles */
+:root{
+  --bg:#0f1724;
+  --card:#0b1220;
+  --muted:#94a3b8;
+  --accent:#ff6b6b;
+  --glass: rgba(255,255,255,0.03);
+}
+
+.create-food{
+  max-width:880px;
+  margin:40px auto;
+  padding:24px;
+  background:linear-gradient(180deg, rgba(172, 164, 164, 0.596), rgba(0, 0, 0, 0.979));
+  border-radius:12px;
+  box-shadow:0 8px 30px rgba(2,6,23,0.6);
+  color:#e6eef8;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+.create-food h3{
+  margin:0 0 12px 0;
+  font-size:20px;
+  font-weight:600;
+}
+
+.upload-form{
+  display:grid;
+  gap:12px;
+}
+
+.upload-form label{
+  display:block;
+  font-size:13px;
+  color:var(--muted);
+}
+
+.upload-form input[type="text"],
+.upload-form textarea{
+  width:100%;
+  padding:10px 12px;
+  margin-top:6px;
+  background:var(--glass);
+  border:1px solid rgba(255,255,255,0.04);
+  border-radius:8px;
+  color:inherit;
+  outline:none;
+}
+
+.file-field{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:10px;
+  border-radius:10px;
+  border:1px dashed rgba(255,255,255,0.04);
+  background: linear-gradient(90deg, rgba(255,255,255,0.01), rgba(0,0,0,0.02));
+}
+
+.upload-drop{ 
+  flex:1;
+  padding:18px;
+  text-align:center;
+  color:var(--muted);
+}
+
+.file-field input[type=file]{
+  border:0;
+  background:transparent;
+}
+
+.preview-video{
+  max-width:200px;
+  border-radius:8px;
+  box-shadow:0 6px 18px rgba(2,6,23,0.6);
+}
+
+.actions{
+  display:flex;
+  justify-content:flex-end;
+  gap:8px;
+}
+
+.btn{
+  padding:10px 16px;
+  border-radius:8px;
+  border:0;
+  cursor:pointer;
+  background:transparent;
+  color:inherit;
+}
+
+.btn.primary{
+  background:linear-gradient(90deg,var(--accent),#ff9a9a);
+  color:#08101a;
+  font-weight:600;
+}
+
+.error{ color:#ffb4b4; font-size:13px }
+.progress{ color:var(--muted); font-size:13px }
+
+@media (max-width:640px){
+  .create-food{ margin:20px; padding:16px }
+  .preview-video{ max-width:120px }
+  .actions{ justify-content:center }
+}
