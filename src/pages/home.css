@@ -20,16 +20,15 @@
   height: 0;
 }
 
-@media screen and (max-width: 350px) {
+/* Make reels full-width on typical mobile devices */
+@media screen and (max-width: 768px) {
   .reels-container {
     height: 100vh;
     width: 100%;
+    max-width: none;
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
     -webkit-overflow-scrolling: touch;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
   }
 }
 
