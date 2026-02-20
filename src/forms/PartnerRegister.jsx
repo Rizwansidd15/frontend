@@ -38,7 +38,7 @@ const PartnerRegister = () => {
         const fd = new FormData();
         fd.append("avatar", avatarFile);
         await axios.post(
-          "http://localhost:3000/api/auth/food-partner/avatar",
+          "https://backend2-xw64.onrender.com/api/auth/food-partner/avatar",
           fd,
           {
             withCredentials: true,

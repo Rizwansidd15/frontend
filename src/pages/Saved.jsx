@@ -10,7 +10,7 @@ const Saved = () => {
   useEffect(() => {
     async function load() {
       try {
-        const res = await fetch("http://localhost:3000/api/food/saved", {
+        const res = await fetch("https://backend2-xw64.onrender.com/api/food/saved", {
           credentials: "include",
         });
         const data = await res.json();

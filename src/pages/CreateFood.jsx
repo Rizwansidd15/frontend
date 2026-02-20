@@ -31,7 +31,7 @@ const CreateFood = () => {
     form.append("video", file);
 
     try {
-      const res = await axios.post("http://localhost:3000/api/food", form, {
+      const res = await axios.post("https://backend2-xw64.onrender.com/api/food", form, {
         withCredentials: true,
         headers: { "Content-Type": "multipart/form-data" },
         onUploadProgress: (ev) => {

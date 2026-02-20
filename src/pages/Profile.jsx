@@ -16,7 +16,7 @@ const Profile = () => {
       try {
         if (partnerId) {
           // fetch all items then filter by partner id (backend doesn't expose partner-specific endpoint)
-          const res = await fetch("http://localhost:3000/api/food", {
+          const res = await fetch("https://backend2-xw64.onrender.com/api/food", {
             credentials: "include",
           });
           const data = await res.json();
@@ -42,7 +42,7 @@ const Profile = () => {
             if (av) setPartnerAvatar(av);
           }
         } else {
-          const res = await fetch("http://localhost:3000/api/food/mine", {
+          const res = await fetch("https://backend2-xw64.onrender.com/api/food/mine", {
             credentials: "include",
           });
           const data = await res.json();

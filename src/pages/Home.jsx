@@ -18,7 +18,7 @@ const Home = () => {
   useEffect(() => {
     async function load() {
       try {
-        const res = await fetch("http://localhost:3000/api/food", {
+        const res = await fetch("https://backend2-xw64.onrender.com/api/food", {
           credentials: "include",
         });
         const data = await res.json();
@@ -52,7 +52,7 @@ const Home = () => {
         [foodId]: (s[foodId] || 0) + (prev ? -1 : 1),
       }));
 
-      await fetch("http://localhost:3000/api/food/like", {
+      await fetch("https://backend2-xw64.onrender.com/api/food/like", {
         method: "POST",
         credentials: "include",
         headers: { "Content-Type": "application/json" },
@@ -78,7 +78,7 @@ const Home = () => {
         [foodId]: (s[foodId] || 0) + (prev ? -1 : 1),
       }));
 
-      await fetch("http://localhost:3000/api/food/save", {
+      await fetch("https://backend2-xw64.onrender.com/api/food/save", {
         method: "POST",
         credentials: "include",
         headers: { "Content-Type": "application/json" },
@@ -94,7 +94,7 @@ const Home = () => {
     setOpenCommentsFor(foodId);
     try {
       const res = await fetch(
-        `http://localhost:3000/api/food/comments?foodId=${foodId}`,
+        `https://backend2-xw64.onrender.com/api/food/comments?foodId=${foodId}`,
         { credentials: "include" },
       );
       const data = await res.json();
@@ -124,7 +124,7 @@ const Home = () => {
       setCommentsCountMap((s) => ({ ...s, [foodId]: (s[foodId] || 0) + 1 }));
       setCommentInputMap((s) => ({ ...s, [foodId]: "" }));
 
-      const res = await fetch("http://localhost:3000/api/food/comment", {
+      const res = await fetch("https://backend2-xw64.onrender.com/api/food/comment", {
         method: "POST",
         credentials: "include",
         headers: { "Content-Type": "application/json" },
