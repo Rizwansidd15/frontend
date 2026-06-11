@@ -192,7 +192,6 @@ const Home = () => {
           <video
             src={item.video}
             playsInline
-            muted
             loop
             className="reel-video"
             controls={false}

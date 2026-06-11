@@ -18,20 +18,25 @@ const PartnerRegister = () => {
     const password = e.target.password.value;
     const uploadProfilePicture = avatarFile ? true : false;
 
-    const response = await axios.post(
-      "http://localhost:3000/api/auth/food-partner/register",
-      {
-        fullname,
-        businessname,
-        email,
-        phone,
-        password,
-        uploadProfilePicture
-      },
-      { withCredentials: true },
-    );
 
-    console.log(response.data);
+    try{
+      const response = await axios.post(
+        "https://backend2-xw64.onrender.com/api/auth/food-partner/register",
+        {
+          fullname,
+          businessname,
+          email,
+          phone,
+          password,
+          uploadProfilePicture
+        },
+        { withCredentials: true },
+      );
+      console.log(response.data);
+    }catch(err){
+         console.log(err);
+    }
+
     // if an avatar was chosen, upload it now (server sets partner cookie on register)
     if (avatarFile) {
       try {
